@@ -51,9 +51,36 @@ class Person:
 # Create a subclass of Person called Student
 class Student(Person):
     def __init__(self, name, age, student_id, course):
+        # The super() method allows one to access attributes and methods from the parent class
         super().__init__(name, age)
         self.student_id = student_id
         self.course = course
 
 j = Student("Jared", 21, 123, "DevOps")
 print(j.name, j.age, j.student_id, j.course)
+
+
+print("*"*30)
+# Task 8
+# Create a dict with 4 items and their prices, 
+jared_shopping_list = {"apples":2, "bananas":2, "bread":1.5, "milk":1}
+print(jared_shopping_list)
+
+
+total = 0
+for prices in jared_shopping_list.values():
+    total += prices
+
+print(sum(jared_shopping_list.values()))
+
+# Task 9 
+# Create a function to do it
+def total(dict):
+    return sum(dict.values())
+
+
+# Task 10
+# 
+jared_shopping_list = {"apples":2, "bananas":2, "bread":1.5, "milk":1}
+jared_shopping_list["kiwis"] = 3
+print(jared_shopping_list)
